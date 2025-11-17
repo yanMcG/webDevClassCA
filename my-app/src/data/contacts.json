@@ -1,7 +1,71 @@
 {
   "contacts": [
     {
-      "id": "3",
+      "id": 0,
+      "age": 38,
+      "name": "Juliet Wells",
+      "gender": "female",
+      "company": "XOGGLE",
+      "email": "julietwells@xoggle.com",
+      "phone": "+1 (913) 412-3410",
+      "address": "522 Livingston Street, Kaka, Georgia, 3604",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Marianne Bean"
+        },
+        {
+          "id": 1,
+          "name": "Spencer Barnes"
+        },
+        {
+          "id": 2,
+          "name": "Andy Murphy"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "age": 20,
+      "name": "Rush Brady",
+      "gender": "male",
+      "company": "JIMBIES",
+      "email": "rushbrady@jimbies.com",
+      "phone": "+1 (887) 566-2815",
+      "address": "260 Bowne Street, Fowlerville, Oregon, 9079",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Margie Curry"
+        },
+        {
+          "id": 1,
+          "name": "Kline Cummings"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "age": 34,
+      "name": "Woodard Orr",
+      "gender": "male",
+      "company": "WAAB",
+      "email": "woodardorr@waab.com",
+      "phone": "+1 (933) 574-3925",
+      "address": "349 Ryder Street, Walker, New Hampshire, 3013",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Flores Compton"
+        },
+        {
+          "id": 1,
+          "name": "Trujillo Dudley"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "age": 40,
       "name": "Rosario Snow",
       "gender": "male",
@@ -21,7 +85,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "age": 25,
       "name": "Maryellen Greene",
       "gender": "female",
@@ -41,7 +105,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "age": 32,
       "name": "Harrison Pope",
       "gender": "male",
@@ -61,7 +125,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "age": 24,
       "name": "Payne Coffey",
       "gender": "male",
@@ -85,7 +149,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "age": 34,
       "name": "John Wilkinson",
       "gender": "male",
@@ -105,7 +169,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": 8,
       "age": 37,
       "name": "Robinson Gallagher",
       "gender": "male",
@@ -125,7 +189,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": 9,
       "age": 35,
       "name": "Patrica Pugh",
       "gender": "female",
@@ -149,7 +213,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": 10,
       "age": 28,
       "name": "Antonia Carr",
       "gender": "female",
@@ -165,7 +229,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": 11,
       "age": 39,
       "name": "Frazier Stephens",
       "gender": "male",
@@ -185,7 +249,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": 12,
       "age": 32,
       "name": "Alicia Hahn",
       "gender": "female",
@@ -205,7 +269,7 @@
       ]
     },
     {
-      "id": "13",
+      "id": 13,
       "age": 20,
       "name": "Jana Mcdaniel",
       "gender": "female",
@@ -233,7 +297,7 @@
       ]
     },
     {
-      "id": "14",
+      "id": 14,
       "age": 21,
       "name": "Melva Drake",
       "gender": "female",
@@ -253,7 +317,7 @@
       ]
     },
     {
-      "id": "15",
+      "id": 15,
       "age": 23,
       "name": "Connie Jarvis",
       "gender": "female",
@@ -273,7 +337,7 @@
       ]
     },
     {
-      "id": "16",
+      "id": 16,
       "age": 33,
       "name": "Moreno Salazar",
       "gender": "male",
@@ -293,7 +357,7 @@
       ]
     },
     {
-      "id": "17",
+      "id": 17,
       "age": 27,
       "name": "Angel Ingram",
       "gender": "female",
@@ -313,7 +377,7 @@
       ]
     },
     {
-      "id": "18",
+      "id": 18,
       "age": 37,
       "name": "John Harrell",
       "gender": "male",
@@ -333,7 +397,7 @@
       ]
     },
     {
-      "id": "19",
+      "id": 19,
       "age": 32,
       "name": "Jerry Hutchinson",
       "gender": "female",
@@ -353,7 +417,7 @@
       ]
     },
     {
-      "id": "20",
+      "id": 20,
       "age": 37,
       "name": "Beth Finch",
       "gender": "female",
@@ -373,7 +437,7 @@
       ]
     },
     {
-      "id": "21",
+      "id": 21,
       "age": 25,
       "name": "Stewart Perez",
       "gender": "male",
@@ -393,7 +457,7 @@
       ]
     },
     {
-      "id": "22",
+      "id": 22,
       "age": 31,
       "name": "Burks Sandoval",
       "gender": "male",
@@ -413,7 +477,7 @@
       ]
     },
     {
-      "id": "23",
+      "id": 23,
       "age": 36,
       "name": "Shelley Stevens",
       "gender": "female",
@@ -433,7 +497,7 @@
       ]
     },
     {
-      "id": "24",
+      "id": 24,
       "age": 26,
       "name": "Norman Guerrero",
       "gender": "male",
@@ -453,7 +517,7 @@
       ]
     },
     {
-      "id": "25",
+      "id": 25,
       "age": 30,
       "name": "Suzette Russo",
       "gender": "female",
@@ -473,7 +537,7 @@
       ]
     },
     {
-      "id": "26",
+      "id": 26,
       "age": 36,
       "name": "Sheena Frederick",
       "gender": "female",
@@ -493,7 +557,7 @@
       ]
     },
     {
-      "id": "27",
+      "id": 27,
       "age": 36,
       "name": "Wolf Morales",
       "gender": "male",
@@ -513,7 +577,7 @@
       ]
     },
     {
-      "id": "28",
+      "id": 28,
       "age": 35,
       "name": "Dyer Horton",
       "gender": "male",
@@ -533,35 +597,12 @@
       ]
     },
     {
-      "id": "66a3",
-      "name": "susan",
-      "email": "suas@email.com",
-      "phone": "80976522234",
-      "address": "12 B "
-    },
-    {
-      "id": "e28f",
-      "name": "BOB",
-      "email": "MARLEY",
-      "phone": "0830422366",
-      "address": "lismonaghan",
-      "age": 106
-    },
-    {
-      "id": "dce3",
+      "id": 30,
       "name": "l00172489",
-      "email": "ryanmcglynn@gmail",
+      "email": "ryanmcglynn@gmail.com",
       "phone": "0830422366",
       "address": "Indiana",
-      "age": 1000000
-    },
-    {
-      "id": 30,
-      "name": "testing",
-      "email": "test",
-      "phone": "87887789897",
-      "address": "fewhfhfhioh",
-      "age": 106
+      "age": 21
     }
   ]
 }
