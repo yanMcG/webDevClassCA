@@ -1,26 +1,6 @@
 {
   "contacts": [
     {
-      "id": "2",
-      "age": 34,
-      "name": "Woodard Orr",
-      "gender": "male",
-      "company": "WAAB",
-      "email": "woodardorr@waab.com",
-      "phone": "+1 (933) 574-3925",
-      "address": "349 Ryder Street, Walker, New Hampshire, 3013",
-      "friends": [
-        {
-          "id": 0,
-          "name": "Flores Compton"
-        },
-        {
-          "id": 1,
-          "name": "Trujillo Dudley"
-        }
-      ]
-    },
-    {
       "id": "3",
       "age": 40,
       "name": "Rosario Snow",
@@ -565,6 +545,22 @@
       "email": "MARLEY",
       "phone": "0830422366",
       "address": "lismonaghan",
+      "age": 106
+    },
+    {
+      "id": "dce3",
+      "name": "l00172489",
+      "email": "ryanmcglynn@gmail",
+      "phone": "0830422366",
+      "address": "Indiana",
+      "age": 1000000
+    },
+    {
+      "id": 30,
+      "name": "testing",
+      "email": "test",
+      "phone": "87887789897",
+      "address": "fewhfhfhioh",
       "age": 106
     }
   ]

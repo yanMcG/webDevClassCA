@@ -61,12 +61,16 @@ export default function ContactList() {
         setLoading(false);
     }, []);
 
+    // initial load
     useEffect(() => {
+        // fetch contacts from server or local file
         fetchcontacts(true);
     }, [fetchcontacts]);
 
+    // handle form field changes
     let handleChange = (e) => {
         let { name, value } = e.target;
+        // update form state
         setForm(prev => ({ ...prev, [name]: value }));
     };
 
@@ -81,7 +85,10 @@ export default function ContactList() {
             email: form.email || 'unknown@example.com',
             phone: form.phone || 'N/A',
             address: form.address || 'N/A',
-            age: parseInt(form.age, 10) || 0
+            age: parseInt(form.age, 10) || 0,
+
+            //get contacts.json length then add 1 for new contacts
+            id: contacts.length + 1
         };
 
         // post to add contacts information to server
@@ -155,13 +162,10 @@ export default function ContactList() {
         let copy = [...contacts];
         copy.sort((a, b) => {
 
-            let aa = Number(a.age) || 0;
-            let bb = Number(b.age) || 0;
-
-            if(aa || bb == 0 ){
-                aa = 'NA';
-                bb = 'NA';
-            }
+            // handle missing or non-numeric ages
+            // i noticed one of the contacts do not have an age, so we need to guard against that
+            let aa = Number(a.age) || 'NA';
+            let bb = Number(b.age) || 'NA';
             return sortOrder === 'asc' ? aa - bb : bb - aa;
         });
         return copy;
@@ -170,7 +174,9 @@ export default function ContactList() {
     // derived Indiana list (case-insensitive match on 'Indiana')
     let indianaContacts = useMemo(() => {
         return contacts.filter(c => {
+            // guard against missing address 
             if (!c || !c.address) return false;
+            // case-insensitive match on 'Indiana'
             return /\bIndiana\b/i.test(c.address);
         });
     }, [contacts]);
@@ -216,13 +222,14 @@ export default function ContactList() {
                 {showIndiana && indianaContacts.length === 0 && <span style={{ color: '#666' }}> No contacts found for Indiana.</span>}
             </div>
 
+            {/* Indiana contacts list */}
             {showIndiana && (
-                <div style={{ marginBottom: 16 }}>
+                <div className={styles.indiana} style={{ marginBottom: 16 }}>
                     <h3 style={{ marginTop: 0 }}>Indiana Contacts ({indianaContacts.length})</h3>
                     {indianaContacts.length > 0 ? (
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
+                        <ul  style={{ listStyle: 'none', padding: 0 }}>
                             {indianaContacts.map(contact => (
-                                <li key={contact.id} className={styles.contactItem}>
+                                <li key={contact.id} className={`${styles.contactItem} ${styles.indianaContactItem}`}>
                                     <h4>{contact.name} {typeof contact.age !== 'undefined' && <span style={{ fontWeight: 400 }}>({contact.age})</span>}</h4>
                                     <p><strong>Age:</strong> {contact.age}</p>
                                     <p><strong>Email:</strong> {contact.email}</p>
@@ -266,7 +273,7 @@ export default function ContactList() {
                         <p><strong>Age:</strong> {contact.age}</p>
                         <p><strong>Email:</strong> {contact.email}</p>
                         <p><strong>Phone:</strong> {contact.phone}</p>
-                        <p><strong>Address:</strong> {contact.address}</p>
+                        <p><strong>Address:</strong> <b><i>{contact.address}</i></b></p>
                         <div>
                             <button onClick={() => deleteContact(contact.id)} className={styles.delete}>Delete</button>
                         </div>
