@@ -39,6 +39,18 @@ export default function ContactList() {
             } catch (err) {
                 // JSON Server fetch failed
                 console.warn('JSON Server fetch failed:', err.message);
+                // handle http status codes like 404 , 409, 400 or 500
+                if (err.response) {
+                    if (err.response.status === 404) {
+                        setError('Contacts not found on server.');
+                    } else if (err.response.status === 409) {
+                        setError('Conflict error occurred while fetching contacts.');
+                    } else if (err.response.status === 400) {
+                        setError('Bad request error occurred while fetching contacts.');
+                    } else if (err.response.status === 500) {
+                        setError('Server error occurred while fetching contacts.');
+                    }
+                }
             }
         }
         // fallback: load from public/data/contacts.json
