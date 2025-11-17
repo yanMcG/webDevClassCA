@@ -1,10 +1,11 @@
 import './App.css';
-import MovieList from './components/movieList';
+import ContactList from './components/contactList';
 
 function App() {
   return (
     <div className="App">
-      <MovieList />
+      {/* call the ContactList component to display al the conatcts from the data/conatcts.json file */}
+      <ContactList />
     </div>
   );
 }
