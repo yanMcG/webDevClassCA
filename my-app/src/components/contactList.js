@@ -290,6 +290,9 @@ export default function ContactList() {
                         <p><strong>Age:</strong> {contact.age}</p>
                         <p><strong>Email:</strong> {contact.email}</p>
                         <p><strong>Phone:</strong> {contact.phone}</p>
+                        {contact.company && <p><strong>Company:</strong> <b><i>{contact.company}</i></b></p>}
+                        {contact.gender && <p><strong>Gender:</strong> <b><i>{contact.gender}</i></b></p>}
+                        {contact.friends && contact.friends.length > 0 && <p><strong>Friends:</strong> <b><i>{contact.friends.map(friend => friend.name).join(', ')}</i></b></p>}
                         <p><strong>Address:</strong> <b><i>{contact.address}</i></b></p>
                         <div>
                             <button onClick={() => deleteContact(contact.id)} className={styles.delete}>Delete</button>
