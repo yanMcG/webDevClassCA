@@ -62,6 +62,21 @@ form button {
   font-size: 14px;
 }
 
+button{
+    padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover{
+    background: #0069d9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 .searchForm button:hover,
 form button:hover {
   background: #0069d9;

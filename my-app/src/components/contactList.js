@@ -3,6 +3,7 @@ import axios from 'axios';
 import styles from './contactList.module.css';
 
 export default function ContactList() {
+    // main contacts state
     let [contacts, setcontacts] = useState([]);
     let [loading, setLoading] = useState(true);
     let [error, setError] = useState(null);
@@ -22,17 +23,21 @@ export default function ContactList() {
     let [sortOrder, setSortOrder] = useState('none');
 
     let fetchcontacts = useCallback(async (preferServer = true) => {
+        // set loading state of server with contacts info
         setLoading(true);
         setError(null);
         let loaded = false;
 
         // try to load from JSON Server first
         if (preferServer) {
+            // attempt to fetch from JSON Server
             try {
                 let res = await axios.get('http://localhost:3002/contacts');
+                // set contacts state from server data store them in array
                 setcontacts(res.data || []);
                 loaded = true;
             } catch (err) {
+                // JSON Server fetch failed
                 console.warn('JSON Server fetch failed:', err.message);
             }
         }
