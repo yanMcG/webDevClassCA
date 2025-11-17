@@ -228,6 +228,8 @@ export default function ContactList() {
                     <p><strong>Email:</strong> {searchResult.email}</p>
                     <p><strong>Phone:</strong> {searchResult.phone}</p>
                     <p><strong>Address:</strong> {searchResult.address}</p>
+                    <p><strong>Gender:</strong> {searchResult.gender}</p>
+
                     <button onClick={() => deleteContact(searchResult.id)} style={{ backgroundColor:'#c00', color:'#fff', border:'none', padding:'6px 10px', borderRadius:4, cursor:'pointer' }}>Delete</button>
 
                 </div>
